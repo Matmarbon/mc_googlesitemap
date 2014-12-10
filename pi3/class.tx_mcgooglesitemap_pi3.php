@@ -28,7 +28,8 @@
  */
 
 
-require_once(PATH_tslib."class.tslib_pibase.php");
+if(!class_exists('tslib_pibase'))
+	require_once(PATH_tslib."class.tslib_pibase.php");
 require_once($GLOBALS['TYPO3_LOADED_EXT']['mc_googlesitemap']['siteRelPath']."class.tx_mcgooglesitemap_base.php");
 
 class tx_mcgooglesitemap_pi3 extends tslib_pibase {
